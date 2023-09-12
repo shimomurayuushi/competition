@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block content %}
+
+<h3>{{ choice.title }}の課題</h3>
+<div class="card">
+    <h5 class="card-header">{{problem.title}}の課題</h5>
+    <div class="card-body m-1">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="投票">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

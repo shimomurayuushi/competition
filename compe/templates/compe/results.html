@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+        現在のあなたの得点
+    </div>
+    <div class="card-body">
+        <h1>選択結果</h1>
+            <p>Total: {{ choice.total }}</p>
+        <input type="button" value="戻る" onClick="javascript:history.go(-1)">
+    </div>
+    <div class="card-footer text-muted">
+        today
+    </div>
+</div>
+<h1></h1>
+
+<p></p>
+
+
+{% endblock content %}
